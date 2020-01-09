@@ -35,7 +35,7 @@ I will be using:
     Architecture
 </h2>
 
- ![img](./architecture.png)
+ ![img](./img/architecture.png)
 
 <h2>Set up </h2>
 I assume that you know how to git clone since you are using GitHub.
@@ -84,13 +84,13 @@ Google Cloud
 
    2. Create Service Account Key through Create Credentials dropdown bar!
 
-      ![img](./Annotation 2020-01-09 021743.png)
+      ![img](./img/Annotation 2020-01-09 021743.png)
 
    3. Under Service Account, choose "New service account" and name your service account name
 
    4. Choose JSON
 
-      ![img](./Annotation 2020-01-09 021849.png)
+      ![img](./img/Annotation 2020-01-09 021849.png)
 
    5. Create without role
 
@@ -106,19 +106,19 @@ Google Cloud
 
    1. Go to [Google Calendar](https://calendar.google.com/) and create new Calendar 
 
-      ![img](./Annotation 2020-01-09 023552.png)
+      ![img](./img/Annotation 2020-01-09 023552.png)
 
    2. Go to the new Calendar's Settings
 
-      ![img](./Annotation 2020-01-09 023525.png)
+      ![img](./img/Annotation 2020-01-09 023525.png)
 
    3. Invite your bot into the calendar using the client email from the downloaded json file and set permission to make changes and manage sharing
 
-      ![img](./Annotation 2020-01-09 023227.png)![img](./Annotation 2020-01-09 023336.png)
+      ![img](./img/Annotation 2020-01-09 023227.png)![img](./img/Annotation 2020-01-09 023336.png)
 
    4. Scroll down and copy the calendar id into bot.js 
 
-      ![img](./Annotation 2020-01-09 023452.png)
+      ![img](./img/Annotation 2020-01-09 023452.png)
 
 ## Create a function
 
@@ -146,7 +146,7 @@ Google Cloud
 
    When you finish these steps, your display should resemble something like the following:
 
-   ![img](./Annotation 2020-01-09 024013.png)
+   ![img](./img/Annotation 2020-01-09 024013.png)
 
    *Ops!, I forgot to change the function to execute*
 
@@ -158,7 +158,7 @@ Google Cloud
 
    - While the function is being deployed, the icon next to it is a small spinner. After it finishes deploying, the spinner turns to a green check mark. You will get something like the following:
 
-   ![img](./Annotation 2020-01-09 024143.png)
+   ![img](./img/Annotation 2020-01-09 024143.png)
 
 3. Click on the function, go to the trigger tab and copy and save the url somewhere. We will use it to integrate with Dialogflow. *In case you don't know, this is a webhook connecting functions and Dialogflow.*
 
@@ -197,7 +197,7 @@ Google Cloud
 
    5. In the [Dialogflow console](https://console.dialogflow.com/)'s navigation menu, click Integration, toggle the Telegram button to **ENABLED**. Copy the token into the space given.
 
-      ![image-20200109012702655](./image-20200109012702655.png)
+      ![image-20200109012702655](./img/image-20200109012702655.png)
 
       *For your information, you can integrate with other chat application in this page. You will just need to find how to integrate them. Here, we will use telegram as an example.*
 

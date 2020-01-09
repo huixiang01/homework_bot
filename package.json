@@ -1,20 +1,25 @@
 {
-  "name": "homeworkbot",
-  "description": "This is the default fulfillment for a Dialogflow agents using Cloud Functions for Firebase",
-  "version": "0.0.1",
-  "private": true,
-  "license": "Apache Version 2.0",
-  "author": "Google Inc.",
-  "engines": {
-    "node": "8"
+  "name": "homework_bot",
+  "version": "1.0.0",
+  "description": "<h1> HEY HERE'S HOW YOU CAN CREATE A BOT FOR HOMEWORK REMINDERS </h1>\r <h2> Functions</h2>\r 1. Set up homework from the bot\r 2. Check homework on a particular date whether there is homework\r    1. if so, state the homework and the time to hand up\r 3. <Work-in-progress> Send Reminder from the bot to class group",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huixiang01/homework_bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huixiang01/homework_bot/issues"
+  },
+  "homepage": "https://github.com/huixiang01/homework_bot#readme",
   "dependencies": {
     "actions-on-google": "^2.12.0",
-    "claudia-bot-builder": "^4.5.0",
-    "dialogflow-fulfillment": "^0.6.1",
     "firebase-admin": "^8.9.0",
     "firebase-functions": "^3.3.0",
-    "googleapis": "^39.2.0",
-    "huh": "^2.0.1"
+    "googleapis": "^46.0.0"
   }
 }
