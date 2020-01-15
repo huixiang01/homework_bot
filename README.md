@@ -1,9 +1,9 @@
 <h1> HEY HERE'S HOW YOU CAN CREATE A BOT FOR HOMEWORK REMINDERS </h1>
 <h2> Functions</h2>
-1.  Set up homework from the bot(I realised that this is not as effective when put in a group)
-2.  Check homework on a particular date whether there is homework
-   - If so, state the homework and the time to hand up
-3.  Send Reminder from the bot to class group at 12midnight.(Only for telegram. After 3 tireless day of searching for that function, I gave up. Maybe it is up there?)
+- Set up homework from the bot(I realised that this is not as effective when put in a group)
+- Check homework on a particular date whether there is homework
+  - If so, state the homework and the time to hand up
+- Send Reminder from the bot to class group at 12 midnight. (Only for telegram. After 3 tireless day of searching for that function, I gave up. Maybe it is up there?)
 
 ---
 
@@ -211,10 +211,13 @@ Google Cloud
       
 
 <h2>Reminder For Telegram</h2>
-1. Since you have set up the calendar, the calendarId into reminder-server.js
-2. Create a new service token. Refer to the top on how to create a new one. Copy the new service token into reminder-server.js
-3. To find out about your chatid, test the followin url: https://api.telegram.org/bot{token}/getUpdates, replacing token with your bot token. In the chat log, put your bot where you want to be( i.e. in a telegram group, channel, etc.) Type the message for the bot In the JSON file, you will see a "chatId" parameter. Enter the chatId into reminder-server.js.
-4. Create a new function in google function, and copy both reminder-server.js and package.json into the function, with all same settings as above.
+- Since you have set up the calendar, the calendarId into reminder-server.js
+
+- Create a new service token. Refer to the top on how to create a new one. Copy the new service token into reminder-server.js.
+
+- To find out about your chatid, test the followin url: https://api.telegram.org/bot{token}/getUpdates, replacing token with your bot token. In the chat log, put your bot where you want to be( i.e. in a telegram group, channel, etc.) Type the message for the bot In the JSON file, you will see a "chatId" parameter. Enter the chatId into reminder-server.js.
+
+- Create a new function in google function, and copy both reminder-server.js and package.json into the function, with all same settings as above.
 
 Okay!. You are good to go! Finally! Enjoy Boot-ing!
 
