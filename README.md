@@ -1,9 +1,9 @@
 <h1> HEY HERE'S HOW YOU CAN CREATE A BOT FOR HOMEWORK REMINDERS </h1>
 <h2> Functions</h2>
-1. Set up homework from the bot(I realised that this is not as effective when put in a group)
-2. Check homework on a particular date whether there is homework
+1.  Set up homework from the bot(I realised that this is not as effective when put in a group)
+2.  Check homework on a particular date whether there is homework
    - If so, state the homework and the time to hand up
-3. Send Reminder from the bot to class group at 12midnight.(Only for telegram. After 3 tireless day of searching for that function, I gave up. Maybe it is up there?)
+3.  Send Reminder from the bot to class group at 12midnight.(Only for telegram. After 3 tireless day of searching for that function, I gave up. Maybe it is up there?)
 
 ---
 
@@ -12,13 +12,16 @@ This interface can be used on many other chat platforms and improve on.
 
 Areas of improvement:
 
-2. Interactive responses
-   - Currently, they are just words. Cards, pictures, voice recognition, ML and even more can be used on this! We can use them from "dialogflow-fulfilment" module
-   - More on [here](https://github.com/dialogflow/dialogflow-fulfillment-nodejs)
-3. More functionality
-   - Currently, we use Google Calendar as Cloud Storage instead of Bucket(teehee!) May need to change for more flexibility
-   - What if prof last min changes the deadline? How would we change from the bot interface? We can use interactive tools if the bot admin(not just me!) knows how to put them in
-   - What if there are 10 and more homework deadlines in the day? How can we improve on the UI/UX?
+1. Interactive responses
+
+- Currently, they are just words. Cards, pictures, voice recognition, ML and even more can be used on this! We can use them from "dialogflow-fulfilment" module
+- More on [here](https://github.com/dialogflow/dialogflow-fulfillment-nodejs)
+
+2. More functionality
+
+- Currently, we use Google Calendar as Cloud Storage instead of Bucket(teehee!) May need to change for more flexibility
+- What if prof last min changes the deadline? How would we change from the bot interface? We can use interactive tools if the bot admin(not just me!) knows how to put them in
+- What if there are 10 and more homework deadlines in the day? How can we improve on the UI/UX?
 
 <h2>To get a general knowledge on what is used...</h2>
 I will be using:
