@@ -1,9 +1,13 @@
 <h1> HEY HERE'S HOW YOU CAN CREATE A BOT FOR HOMEWORK REMINDERS </h1>
 <h2> Functions</h2>
-- Set up homework from the bot(I realised that this is not as effective when put in a group)
+Current Functions:
+
+- Set up homework from the bot
+  - I realised that this is not as effective when put in a group. 
+  - You may want to improve this by putting this into interactive buttons and calendars, increase ML settings in dialogflow or ignore the intent
 - Check homework on a particular date whether there is homework
   - If so, state the homework and the time to hand up
-- Send Reminder from the bot to class group at 12 midnight. (Only for telegram. After 3 tireless day of searching for that function, I gave up. Maybe it is up there?)
+- Send Reminder from the bot to class group at 12 midnight. (Only for telegram. After 3 tireless day of searching for that dialogflow function, I gave up. Maybe it is up there?)
 
 ---
 
@@ -15,7 +19,7 @@ Areas of improvement:
 1. Interactive responses
 
 - Currently, they are just words. Cards, pictures, voice recognition, ML and even more can be used on this! We can use them from "dialogflow-fulfilment" module
-- More on [here](https://github.com/dialogflow/dialogflow-fulfillment-nodejs)
+- More on [here](https://github.com/dialogflow/dialogflow-fulfillment-nodejs) or [here](https://cloud.google.com/dialogflow/docs/intents-rich-messages#custom_payload)
 
 2. More functionality
 
