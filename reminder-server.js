@@ -58,7 +58,6 @@ exports.sendReminder = (req, res) => {
             homeworkstring = '';
             for (i = 0; i < results.length; i++) {
                 if ('description' in results[i]) {
-                    homeworkstring += (`${i + 1}. ${results[i].summary}: ${results[i].description} \n`);
                 } else {
                     homeworkstring += (`${i + 1}. ${results[i].summary} \n`);
                 }
