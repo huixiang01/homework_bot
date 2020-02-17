@@ -1,10 +1,13 @@
 <h1> HEY HERE'S HOW YOU CAN CREATE A BOT FOR HOMEWORK REMINDERS </h1>
 <h2> Functions</h2>
+Current Functions:
 
-1. Set up homework from the bot
-2. Check homework on a particular date whether there is homework
-   - If so, state the homework and the time to hand up
-3. Send Reminder from the bot to class group (WORK-IN-PROGRESS)
+- Set up homework from the bot
+  - I realised that this is not as effective when put in a group. 
+  - You may want to improve this by putting this into interactive buttons and calendars, increase ML settings in dialogflow or ignore the intent
+- Check homework on a particular date whether there is homework
+  - If so, state the homework and the time to hand up
+- Send Reminder from the bot to class group at 12 midnight. (Only for telegram. After 3 tireless day of searching for that dialogflow function, I gave up. Maybe it is up there?)
 
 ---
 
@@ -13,15 +16,16 @@ This interface can be used on many other chat platforms and improve on.
 
 Areas of improvement:
 
-1. More chat platforms
-2. Interactive responses
-   - Currently, they are just words. Cards, pictures, voice recognition, ML and even more can be used on this!
-3. More functionality
-   - Currently, we use Google Calendar as Cloud Storage instead of Bucket(teehee!) May need to change for more flexibility
-   - What if prof last min changes the deadline? How would we change from the bot interface? We can use interactive tools if the bot admin(not just me!) knows how to put them in
-   - What if there are 10 and more homework deadlines in the day? How can we improve on the UI/UX?
+1. Interactive responses
 
-As for now, it can do the basics, and I am improving the 3rd part.
+- Currently, they are just words. Cards, pictures, voice recognition, ML and even more can be used on this! We can use them from "dialogflow-fulfilment" module
+- More on [here](https://github.com/dialogflow/dialogflow-fulfillment-nodejs) or [here](https://cloud.google.com/dialogflow/docs/intents-rich-messages#custom_payload)
+
+2. More functionality
+
+- Currently, we use Google Calendar as Cloud Storage instead of Bucket(teehee!) May need to change for more flexibility
+- What if prof last min changes the deadline? How would we change from the bot interface? We can use interactive tools if the bot admin(not just me!) knows how to put them in
+- What if there are 10 and more homework deadlines in the day? How can we improve on the UI/UX?
 
 <h2>To get a general knowledge on what is used...</h2>
 I will be using:
@@ -30,7 +34,7 @@ I will be using:
 2. Google Cloud Functions (Advised to use free subscription with your fake account. Will only last for 1 year. Tips on Cloud Programming 101.haha)
 3. Dialogflow
 4. Google Calendar APIs
-5. <work-in-progress> Google Scheduler
+5. Google Scheduler
 
 <h2>
     Architecture
@@ -179,7 +183,7 @@ Google Cloud
 3. Import the zip file in the folder 
 
    - Refer to https://miningbusinessdata.com/how-to-import-an-agent-zip-file-into-api-ai/
-
+- The file we are importing is homework_bot.zip
    - This contains the content of the bot. You can customise and start over again... but this takes too much time. haha
 
 4. Integrate with telegram and functions
@@ -210,4 +214,16 @@ Google Cloud
 
       
 
-Okay! You are good to go! Finally! Enjoy Boot-ing!
+<h2>Reminder For Telegram</h2>
+- Since you have set up the calendar, the calendarId into reminder-server.js
+
+- Create a new service token. Refer to the top on how to create a new one. Copy the new service token into reminder-server.js.
+
+- To find out about your chatid, test the followin url: https://api.telegram.org/bot{token}/getUpdates, replacing token with your bot token. In the chat log, put your bot where you want to be( i.e. in a telegram group, channel, etc.) Type the message for the bot In the JSON file, you will see a "chatId" parameter. Enter the chatId into reminder-server.js.
+
+- Create a new function in google function, and copy both reminder-server.js and package.json into the function, with all same settings as above.
+
+Okay!. You are good to go! Finally! Enjoy Boot-ing!
+
+
+
