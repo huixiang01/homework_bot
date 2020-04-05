@@ -35,20 +35,15 @@ exports.sendReminder = (req, res) => {
         'en-US',
         { month: 'long', day: 'numeric', timeZone: timeZone }
     );
-    var startDate = new Date((new Date().setDate(new Date().getDate() + 1)))
-    var endDate = new Date((new Date().setDate(new Date().getDate() + 2)))
-    startDate.setHours(0)
-    startDate.setMinutes(0)
-    endDate.setHour(0)
-    endDate.setMinutes(0)
-
+    end = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + 2, 0, 0)
+    start = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + 1, 0, 0)
     // cron.schedule("*/5 * * * *", function () {
     return (new Promise((resolve, reject) => {
         calendar.events.list({
             auth: serviceAccountAuth, // List events for time period
             calendarId: calendarId,
-            timeMin: startDate.toISOString(),
-            timeMax: endDate.toISOString(),
+            timeMin: start,
+            timeMax: end,
         }, (err, calendarResponse) => {
             err ? reject(err) : resolve(calendarResponse.data.items)
         });
@@ -57,12 +52,16 @@ exports.sendReminder = (req, res) => {
         if (results.length > 0) {
             homeworkstring = '';
             for (i = 0; i < results.length; i++) {
-                if ('description' in results[i]) {
+              	if ('description' in results[i]) {
+                    console.log(results[i].summary, results[i].description)
+                  	homeworkstring += (`${i + 1}. ${results[i].summary}: ${results[i].description} \n`);
                 } else {
+                  	console.log(results[i].summary)
                     homeworkstring += (`${i + 1}. ${results[i].summary} \n`);
                 }
             }
             var messagetext = `We have the following homeworks due tommorrow, ${HomeworkTimeString}`
+            console.log(messagetext, homeworkstring)
             axios.post(`${url}${token}/sendMessage?chat_id=${chat_Id}&text=${messagetext}`)
                 .then((response) => {
                     console.log(`statusCode: ${response.statusCode}`);
